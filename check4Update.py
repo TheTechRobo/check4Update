@@ -35,7 +35,7 @@ if nV != v:
             raise DownErr
             unsu = True
         finally: #whether error occurs or not
-            if unsu == True
+            if unsu == True:
                 print("Process failed")
                 raise QuestionQuestionQuestionableError
             else:

@@ -5,6 +5,7 @@ v = "1.0" #Variable of using version
 
 class DownErr(Exception):
     print("ERROR DOWNLOADING WEBSITE -- CHECK INTERNET CONNECTION")
+    print("To debug, prefix line 18 with a #")
     sys.exit()
 class QuestionQuestionQuestionableError(Exception):
     print("Random error. If it is known the error is shown above")

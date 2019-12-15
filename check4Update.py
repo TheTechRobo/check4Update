@@ -27,7 +27,7 @@ if nV != v:
     print("Latest version:", nV)
     print("You are utilising version ", v)
     rN = input("Show release notes???  y/n, case sensitive")
-    if rN == y:
+    if rN.lower() in ['y', 'yes']:
         link = "https://thetechrobo.github.io/changelog" #URL to download
         try:
             f = urlopen(link) #Download URL
@@ -42,7 +42,7 @@ if nV != v:
             else:
                 print("Process success!")
     yN = input("Download newest version?? y/n, case-sensitive")
-    if yN == "y":
+    if yN.lower() in ['y', 'yes']:
         u()
     else:
         print("You should definitley download it ASAP :)")

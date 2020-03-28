@@ -1,8 +1,7 @@
 def u():
     from sys import exit
     class Cancelled(Exception):
-        print("Cancelled")
-    exit("CANCELLED PROCESS -- The script was interrupted")
+        exit("PROCESS TERMINATED -- The script was interrupted")
     print("This will OVERWRITE all files with same name in current working dir!!")
     cont = input("Would you still like to continue? y/n, case-sensitive")
     if cont == "y":

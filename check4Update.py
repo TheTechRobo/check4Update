@@ -28,7 +28,7 @@ if nV != v:
     print("You are utilising version ", v)
     rN = input("Show release notes???  y/n, case sensitive")
     if rN.lower() in ['y', 'yes']:
-        link = "https://thetechrobo.github.io/changelog" #URL to download
+        link = "url.to/file" #URL to download
         try:
             f = urlopen(link) #Download URL
             nV = f.read() #Read the downloaded URL

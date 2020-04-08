@@ -1,4 +1,5 @@
 from urllib2 import urlopen
+from sys import exit
 def download(filename, url):
     response = urlopen(url)
     data = response.read()
@@ -38,5 +39,5 @@ else:
         download(thirdfilename.py, url.to/file3)
         download(version, url.to/version)
         print("Success !")
-        print("Now starting the updated version...")
-        #start your program here!
+        print("Please restart the main script.")
+        exit()

@@ -11,7 +11,8 @@ def view(url):
     response = urlopen(url)
     data = response.read()
     #output
-version = 1.0 #update this every time, or else it will not work properly. It has to be CORRECT!
+version = open("version", "r") #source www.guru99.com/reading-and-writing-files-in-python.html
+version = version.read()
 link = "https://thetechrobo.github.io/checkVersion" #link to file with version of program
 newVer = view(url)
 newVer = newVer.read()
@@ -35,6 +36,7 @@ else:
         download(firstfilename.py, url.to/file)
         download(secondfilename.py, url.to/file2)
         download(thirdfilename.py, url.to/file3)
+        download(version, url.to/version)
         print("Success !")
         print("Now starting the updated version...")
         #start your program here!

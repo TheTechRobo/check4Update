@@ -8,7 +8,7 @@ def view(url):
     changelog = changelog.content
 version = open("version", "r") #source www.guru99.com/reading-and-writing-files-in-python.html
 version = version.read()
-link = "link.to/version" #link to file with version of program
+link = "http://link.to/version" #link to file with version of program
 newVer = view(link)
 newVer = newVer.read()
 print("Latest version: ", newVer)
@@ -28,10 +28,10 @@ else:
     if want == "y":
         print("OK, downloading it")
         #TODO : add progress bar
-        download(firstfilename.py, url.to/file)
-        download(secondfilename.py, url.to/file2)
-        download(thirdfilename.py, url.to/file3)
-        download(version, url.to/version)
+        download(firstfilename.py, "http://url.to/file")
+        download(secondfilename.py, "http://url.to/file2")
+        download(thirdfilename.py, "http://url.to/file3")
+        download(version, "http://url.to/version")
         print("Success !")
         print("Please restart the main script.")
         exit()

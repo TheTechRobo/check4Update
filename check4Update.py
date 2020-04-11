@@ -1,21 +1,15 @@
-from urllib2 import urlopen
+import requests
 from sys import exit
-def download(filename, url):
-    response = urlopen(url)
-    data = response.read()
-
-    # Write data to file
-    file_ = open(filename, 'w')
-    file_.write(data)
-    file_.close()
+def download(filename, url): #Source: dzone.com/articles/simple-examples-of-downloading-files-using-python
+    myfile = requests.get(url)
+    open(filename, 'wb').write(myfile.content)
 def view(url):
-    response = urlopen(url)
-    data = response.read()
-    #output
+    changelog = requests.get(url)
+    changelog = changelog.content
 version = open("version", "r") #source www.guru99.com/reading-and-writing-files-in-python.html
 version = version.read()
-link = "https://thetechrobo.github.io/checkVersion" #link to file with version of program
-newVer = view(url)
+link = "link.to/version" #link to file with version of program
+newVer = view(link)
 newVer = newVer.read()
 print("Latest version: ", newVer)
 print("Current version: ", version)

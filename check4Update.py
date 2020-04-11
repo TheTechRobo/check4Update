@@ -20,7 +20,7 @@ else:
     see = input("Do you want to view the changelog? Y/n: ")
     see.lower()
     if see == "y":
-        view(link.to/changelog)
+        view("link.to/changelog")
     else:
         print("OK, skipping...")
     want = input("Do you want to download the new version? (Y/n) ")
@@ -33,5 +33,5 @@ else:
         download(thirdfilename.py, "http://url.to/file3")
         download(version, "http://url.to/version")
         print("Success !")
-        print("Please restart the main script.")
+        print("Please restart the <ADD SCRIPT NAME HERE!>.")
         exit()

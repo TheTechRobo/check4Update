@@ -1,5 +1,7 @@
 import requests
 def down(url, filename):
-    response = requests.get(url, stream=True)
+    downloadedFile = requests.get(url, stream=True)
+    downloadedFile = downloadedFile.get()
     with open(filename, "wb") as handle:
-        handle.write(data)
+        handle.write(response)
+down("https://hello.ca", "hello.html")
